@@ -8,6 +8,11 @@
   align-items: center;
 }
 
+.header input {
+  height: 33px;
+  width: 800px;
+}
+
 .card {
   box-shadow: 3px 3px 3px 3px grey;
   margin: 20px;
@@ -22,4 +27,5 @@
 
 .card-block {
   display: flex;
+  flex-wrap: wrap;
 }
