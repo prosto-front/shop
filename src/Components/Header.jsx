@@ -1,5 +1,4 @@
-export const Header = ({handleInput}) => {
-
+export const Header = ({ handleInput, handleOpen }) => {
   return (
     <div className="header">
       <div>
@@ -9,7 +8,22 @@ export const Header = ({handleInput}) => {
           alt="здсь фото"
         />
       </div>
-      <input onChange={(e) => handleInput(e.target.value)}/>
+      <div onClick={handleOpen}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="60"
+          height="60"
+          viewBox="0 0 48 48"
+        >
+          <path
+            fill="#fff"
+            d="M6 22H42V26H6zM6 10H42V14H6zM6 34H42V38H6z"
+          ></path>
+        </svg>
+      </div>
+      <input onChange={(e) => handleInput(e.target.value)} />
       <div>header</div>
     </div>
   )

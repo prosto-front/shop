@@ -115,21 +115,65 @@ const prodacts = [
 ]
 
 function App() {
-  const [inputName, setInputName] = useState('')
+  const [category, setCategory] = useState("")
+  const [inputName, setInputName] = useState("")
+  const [openNavbar, setopenNavbar] = useState(false)
 
-  const filteredProduct = inputName ? prodacts.filter((el) => el.brand === inputName) : prodacts
+  const filteredProduct = prodacts.filter((el) => {
+    const matchesInputName = inputName
+      ? el.name.toLowerCase().includes(inputName.toLowerCase())
+      : true
+    const matchesCategory = category ? el.category === category : true
 
-const handleInput = (text) => {
- setInputName(text)
-}
+    return matchesInputName && matchesCategory
+  })
+
+  const handleInput = (text) => {
+    setInputName(text)
+  }
+
+  const handleOpen = () => {
+    setopenNavbar(!openNavbar)
+  }
+
+  const changeCategory = (name) => {
+    if (category === name) {
+      setCategory("")
+      return
+    }
+    setCategory(name)
+  }
 
   return (
     <div>
-      <Header handleInput={handleInput}/>
+      <Header handleInput={handleInput} handleOpen={handleOpen} />
+      {openNavbar && (
+        <div className="navbar">
+          <div
+            onClick={() => changeCategory("laptop")}
+            className={category === "laptop" && "activeCategory"}
+          >
+            Ноутбуки
+          </div>
+          <div
+            onClick={() => changeCategory("phone")}
+            className={category === "phone" && "activeCategory"}
+          >
+            Телефоны
+          </div>
+          <div
+            onClick={() => changeCategory("monitor")}
+            className={category === "monitor" && "activeCategory"}
+          >
+            Мониторы
+          </div>
+        </div>
+      )}
       <div className="card-block">
         {filteredProduct.map((el) => (
           <Card
             key={el.id}
+            brand={el.brand}
             name={el.name}
             img={el.img}
             rating={el.rating}
