@@ -115,17 +115,18 @@ const prodacts = [
 ]
 
 function App() {
-  const [category, setCategory] = useState("")
   const [inputName, setInputName] = useState("")
-  const [openNavbar, setopenNavbar] = useState(false)
+  const [category, setCategory] = useState("")
+
+  const [openNavbar, setOpenNavbar] = useState(false)
 
   const filteredProduct = prodacts.filter((el) => {
-    const matchesInputName = inputName
+    const matchName = inputName
       ? el.name.toLowerCase().includes(inputName.toLowerCase())
       : true
-    const matchesCategory = category ? el.category === category : true
+    const matchCategory = category ? category === el.category : true
 
-    return matchesInputName && matchesCategory
+    return matchName && matchCategory
   })
 
   const handleInput = (text) => {
@@ -133,15 +134,15 @@ function App() {
   }
 
   const handleOpen = () => {
-    setopenNavbar(!openNavbar)
+    setOpenNavbar(!openNavbar)
   }
 
-  const changeCategory = (name) => {
-    if (category === name) {
+  const handleChangeCategory = (changedCategory) => {
+    if (category === changedCategory) {
       setCategory("")
       return
     }
-    setCategory(name)
+    setCategory(changedCategory)
   }
 
   return (
@@ -150,20 +151,20 @@ function App() {
       {openNavbar && (
         <div className="navbar">
           <div
-            onClick={() => changeCategory("laptop")}
-            className={category === "laptop" && "activeCategory"}
-          >
-            Ноутбуки
-          </div>
-          <div
-            onClick={() => changeCategory("phone")}
-            className={category === "phone" && "activeCategory"}
+            onClick={() => handleChangeCategory("phone")}
+            className={category === "phone" && "active"}
           >
             Телефоны
           </div>
           <div
-            onClick={() => changeCategory("monitor")}
-            className={category === "monitor" && "activeCategory"}
+            onClick={() => handleChangeCategory("laptop")}
+            className={category === "laptop" && "active"}
+          >
+            Ноутбуки
+          </div>
+          <div
+            onClick={() => handleChangeCategory("monitor")}
+            className={category === "monitor" && "active"}
           >
             Мониторы
           </div>
@@ -173,8 +174,8 @@ function App() {
         {filteredProduct.map((el) => (
           <Card
             key={el.id}
-            brand={el.brand}
             name={el.name}
+            brand={el.brand}
             img={el.img}
             rating={el.rating}
             price={el.price}

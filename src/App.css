@@ -18,7 +18,7 @@
   margin: 20px;
   padding: 10px;
   width: 250px;
-  height: 360px;
+  height: 350px;
 }
 
 .card div {
@@ -32,22 +32,18 @@
 
 .navbar {
   position: absolute;
-  background: #ffffff;
-  height: 100vh;
+  background: rgb(253, 252, 252);
   width: 300px;
-  padding: 10px;
   opacity: 0.9;
+  height: 100%;
   box-shadow: 3px 3px 3px 3px grey;
+  padding: 10px;
 }
 
 .navbar div {
-  margin: 10px;
-  border: 1px solid rgb(221, 220, 220);
-  padding: 8px;
+  padding: 20px;
 }
 
-.navbar div:hover,
-.activeCategory {
-  background: rgb(99, 99, 251);
-  color: #fff;
+.navbar div:hover, .active {
+  background: rgb(83, 83, 244);
 }
