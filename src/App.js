@@ -120,14 +120,11 @@ function App() {
 
   const [openNavbar, setOpenNavbar] = useState(false)
 
-  const filteredProduct = prodacts.filter((el) => {
-    const matchName = inputName
-      ? el.name.toLowerCase().includes(inputName.toLowerCase())
-      : true
-    const matchCategory = category ? category === el.category : true
-
-    return matchName && matchCategory
-  })
+  const filteredProduct = prodacts.filter(
+    (el) =>
+      el.category.includes(category) &&
+      el.name.toLowerCase().includes(inputName.toLowerCase())
+  )
 
   const handleInput = (text) => {
     setInputName(text)
@@ -138,10 +135,11 @@ function App() {
   }
 
   const handleChangeCategory = (changedCategory) => {
-    if (category === changedCategory) {
+    if (changedCategory === category) {
       setCategory("")
       return
     }
+
     setCategory(changedCategory)
   }
 
