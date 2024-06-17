@@ -21,9 +21,9 @@
   height: 350px;
 }
 
-.card div {
+/* .card div {
   margin-top: 10px;
-}
+} */
 
 .card-block {
   display: flex;
@@ -46,4 +46,13 @@
 
 .navbar div:hover, .active {
   background: rgb(83, 83, 244);
+}
+
+.cardConten {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardIcon {
+  margin-right: 25px;
 }
