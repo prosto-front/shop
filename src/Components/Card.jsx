@@ -20,9 +20,11 @@ export const Card = ({
           <div>рейтинг: {rating}</div>
           <h3>${price}</h3>
         </div>
-        <div className="cardIcon" onClick={() => addToFavorites(id)}>
-          <FavoriteIcon active={favoritesIds.includes(id)} />
-        </div>
+        {favoritesIds && (
+          <div className="cardIcon" onClick={() => addToFavorites(id)}>
+            <FavoriteIcon active={favoritesIds.includes(id)} />
+          </div>
+        )}
       </div>
     </div>
   )

@@ -1,8 +1,8 @@
 import { useState } from "react"
 import "./App.css"
-import { Card } from "./Components/Card"
-import { Header } from "./Components/Header"
-import { Navbar } from "./Components/Navbar"
+import { Route, Routes } from "react-router-dom"
+import { Main } from "./Main"
+import { FavoritePage } from "./FavoritePage"
 
 const prodacts = [
   {
@@ -154,30 +154,34 @@ function App() {
     setFavoritesIds([...favoritesIds, id])
   }
 
+  const favoriteProducts = prodacts.filter((product) =>
+    favoritesIds.includes(product.id)
+  )
+
   return (
     <div>
-      <Header handleInput={handleInput} handleOpen={handleOpen} />
-      {openNavbar && (
-        <Navbar
-          handleChangeCategory={handleChangeCategory}
-          selectedCategory={selectedCategory}
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Main
+              openNavbar={openNavbar}
+              handleInput={handleInput}
+              handleOpen={handleOpen}
+              handleChangeCategory={handleChangeCategory}
+              selectedCategory={selectedCategory}
+              filteredProduct={filteredProduct}
+              addToFavorites={addToFavorites}
+              favoritesIds={favoritesIds}
+            />
+          }
         />
-      )}
-      <div className="card-block">
-        {filteredProduct.map((el) => (
-          <Card
-            addToFavorites={addToFavorites}
-            favoritesIds={favoritesIds}
-            id={el.id}
-            key={el.id}
-            name={el.name}
-            brand={el.brand}
-            img={el.img}
-            rating={el.rating}
-            price={el.price}
-          />
-        ))}
-      </div>
+
+        <Route
+          path="/favorite"
+          element={<FavoritePage favoriteProducts={favoriteProducts} />}
+        />
+      </Routes>
     </div>
   )
 }
