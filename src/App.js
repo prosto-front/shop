@@ -116,6 +116,15 @@ const prodacts = [
 ]
 
 function App() {
+  const [users, setUsers] = useState([])
+
+  const getUsers = () => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => response.json())
+      .then((result) => setUsers(result))
+      .catch((error) => console.log(error))
+  }
+
   const [inputName, setInputName] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("")
   const [favoritesIds, setFavoritesIds] = useState([])
@@ -160,7 +169,16 @@ function App() {
 
   return (
     <div>
-      <Routes>
+      <h1>sait</h1>
+      <button onClick={getUsers}>get users</button>
+      {users.map((user) => (
+        <div>
+          <div>{user.name}</div>
+          <div>{user.phone}</div>
+        </div>
+      ))}
+
+      {/* <Routes>
         <Route
           path="/"
           element={
@@ -181,7 +199,7 @@ function App() {
           path="/favorite"
           element={<FavoritePage favoriteProducts={favoriteProducts} />}
         />
-      </Routes>
+      </Routes> */}
     </div>
   )
 }
