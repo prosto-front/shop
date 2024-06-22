@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import "./App.css"
 import { Route, Routes } from "react-router-dom"
 import { Main } from "./Main"
@@ -115,15 +115,16 @@ const prodacts = [
   },
 ]
 
+
 function App() {
   const [users, setUsers] = useState([])
 
-  const getUsers = () => {
+  useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
       .then((result) => setUsers(result))
       .catch((error) => console.log(error))
-  }
+  }, [])
 
   const [inputName, setInputName] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("")
@@ -170,7 +171,6 @@ function App() {
   return (
     <div>
       <h1>sait</h1>
-      <button onClick={getUsers}>get users</button>
       {users.map((user) => (
         <div>
           <div>{user.name}</div>
