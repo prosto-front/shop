@@ -11,6 +11,7 @@ export const Main = ({
   filteredProduct,
   addToFavorites,
   favoritesIds,
+  loading
 }) => {
   return (
     <>
@@ -21,6 +22,7 @@ export const Main = ({
           selectedCategory={selectedCategory}
         />
       )}
+      {loading && <h1>Loading...</h1>}
       <div className="card-block">
         {filteredProduct.map((el) => (
           <Card
