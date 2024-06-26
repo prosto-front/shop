@@ -7,23 +7,24 @@ import { FavoritePage } from "./FavoritePage"
 function App() {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(false)
+  const [inputName, setInputName] = useState("")
+  const [selectedCategory, setSelectedCategory] = useState("")
+  const [favoritesIds, setFavoritesIds] = useState([])
+
+  const [openNavbar, setOpenNavbar] = useState(false)
 
   useEffect(() => {
     setLoading(true)
-    fetch("http://localhost:5000/products")
+    fetch(
+      `http://localhost:5000/products?q=${inputName}&category_like=${selectedCategory}`
+    )
       .then((response) => response.json())
       .then((result) => {
         setLoading(false)
         setProducts(result)
       })
       .catch((error) => console.log(error))
-  }, [])
-
-  const [inputName, setInputName] = useState("")
-  const [selectedCategory, setSelectedCategory] = useState("")
-  const [favoritesIds, setFavoritesIds] = useState([])
-
-  const [openNavbar, setOpenNavbar] = useState(false)
+  }, [inputName, selectedCategory])
 
   const handleInput = (text) => {
     setInputName(text)
