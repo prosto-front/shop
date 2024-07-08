@@ -1,15 +1,8 @@
 import { FavoriteIcon } from "./FavoriteIcon"
 
-export const Card = ({
-  img,
-  name,
-  rating,
-  price,
-  brand,
-  addToFavorites,
-  id,
-  favoritesIds,
-}) => {
+export const Card = ({ product, addToFavorites, favoritesIds }) => {
+  const { name, brand, price, img, rating, id } = product
+
   return (
     <div className="card">
       <img width={200} height={200} src={img} alt="здeсь было фото" />
@@ -20,8 +13,9 @@ export const Card = ({
           <div>рейтинг: {rating}</div>
           <h3>${price}</h3>
         </div>
+
         {favoritesIds && (
-          <div className="cardIcon" onClick={() => addToFavorites(id)}>
+          <div className="cardIcon" onClick={() => addToFavorites(product)}>
             <FavoriteIcon active={favoritesIds.includes(id)} />
           </div>
         )}

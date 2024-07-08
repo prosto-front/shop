@@ -6,10 +6,10 @@ import { FavoritePage } from "./FavoritePage"
 
 function App() {
   const [products, setProducts] = useState([])
+  const [favoriteProducts, setFavoriteProducts] = useState([])
   const [loading, setLoading] = useState(false)
   const [inputName, setInputName] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("")
-  const [favoritesIds, setFavoritesIds] = useState([])
 
   const [openNavbar, setOpenNavbar] = useState(false)
 
@@ -25,6 +25,19 @@ function App() {
       })
       .catch((error) => console.log(error))
   }, [inputName, selectedCategory])
+
+  const loadFavorites = () => {
+    fetch(`http://localhost:5000/favorites`)
+      .then((response) => response.json())
+      .then((result) => {
+        setFavoriteProducts(result)
+      })
+      .catch((error) => console.log(error))
+  }
+
+  useEffect(() => {
+    loadFavorites()
+  }, [])
 
   const handleInput = (text) => {
     setInputName(text)
@@ -43,18 +56,21 @@ function App() {
     setSelectedCategory(changedCategory)
   }
 
-  const addToFavorites = (id) => {
-    if (favoritesIds.includes(id)) {
-      setFavoritesIds(favoritesIds.filter((i) => i !== id))
-      return
+  const addToFavorites = (product) => {
+    if (favoriteProducts.some((el) => el.id === product.id)) {
+      fetch(`http://localhost:5000/favorites/${product.id}`, {
+        method: "DELETE",
+      }).then(() => loadFavorites())
+    } else {
+      fetch(`http://localhost:5000/favorites`, {
+        method: "POST",
+        body: JSON.stringify(product),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }).then(() => loadFavorites())
     }
-
-    setFavoritesIds([...favoritesIds, id])
   }
-
-  const favoriteProducts = products.filter((product) =>
-    favoritesIds.includes(product.id)
-  )
 
   return (
     <div>
@@ -70,7 +86,7 @@ function App() {
               selectedCategory={selectedCategory}
               products={products}
               addToFavorites={addToFavorites}
-              favoritesIds={favoritesIds}
+              favoritesIds={favoriteProducts.map((i) => i.id)}
               loading={loading}
             />
           }
