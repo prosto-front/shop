@@ -1,17 +1,22 @@
 import { Link } from "react-router-dom"
 import { Card } from "./Components/Card"
 import { useSelector, useDispatch } from "react-redux"
-import { increment } from "./counterSlice"
+import { increment, decrement, incrementByAmount } from "./counterSlice"
+import { addPost } from "./postSlice"
 
 export const FavoritePage = ({ favoriteProducts }) => {
   const count = useSelector((state) => state.counter.value)
+  const posts = useSelector((state) => state.posts.posts)
+  
   const dispatch = useDispatch()
 
-  console.log(count)
+  console.log(posts)
   return (
     <div>
-      <button onClick={() => dispatch(increment())}>plus</button>
-
+      <button onClick={() => dispatch(addPost("old post"))}>add</button>
+      {posts.map((i) => (
+        <div>{i}</div>
+      ))}
       {/* <div className="card-block">
         {favoriteProducts.length ? (
           favoriteProducts.map((el) => <Card key={el.id} product={el} />)
