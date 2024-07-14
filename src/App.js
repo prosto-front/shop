@@ -26,13 +26,11 @@ function App() {
       .catch((error) => console.log(error))
   }, [inputName, selectedCategory])
 
-  const loadFavorites = () => {
-    fetch(`http://localhost:5000/favorites`)
-      .then((response) => response.json())
-      .then((result) => {
-        setFavoriteProducts(result)
-      })
-      .catch((error) => console.log(error))
+  const loadFavorites = async () => {
+    const response = await fetch(`http://localhost:5000/favorites`)
+    const result = await response.json()
+
+    setFavoriteProducts(result)
   }
 
   useEffect(() => {

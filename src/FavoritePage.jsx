@@ -7,7 +7,7 @@ import { addPost } from "./postSlice"
 export const FavoritePage = ({ favoriteProducts }) => {
   const count = useSelector((state) => state.counter.value)
   const posts = useSelector((state) => state.posts.posts)
-  
+
   const dispatch = useDispatch()
 
   console.log(posts)
@@ -15,7 +15,7 @@ export const FavoritePage = ({ favoriteProducts }) => {
     <div>
       <button onClick={() => dispatch(addPost("old post"))}>add</button>
       {posts.map((i) => (
-        <div>{i}</div>
+        <div key={i}>{i}</div>
       ))}
       {/* <div className="card-block">
         {favoriteProducts.length ? (

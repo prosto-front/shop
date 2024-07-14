@@ -27,6 +27,7 @@ export const Main = ({
       <div className="card-block">
         {products.map((product) => (
           <Card
+            key={product.id}
             addToFavorites={addToFavorites}
             favoritesIds={favoritesIds}
             product={product}
