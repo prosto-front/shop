@@ -111,15 +111,6 @@
   ],
   "favorites": [
     {
-      "id": 6,
-      "brand": "apple",
-      "name": "iphone 14",
-      "price": 700,
-      "category": "phone",
-      "rating": 5,
-      "img": "https://www.technodom.kz/_next/image?url=https%3A%2F%2Fapi.technodom.kz%2Ff3%2Fapi%2Fv1%2Fimages%2F800%2F800%2F265302_1hh.jpg&w=3840&q=85"
-    },
-    {
       "id": 9,
       "brand": "samsung",
       "name": "Galaxy Book",
@@ -127,15 +118,6 @@
       "category": "laptop",
       "rating": 5,
       "img": "https://pimcdn.sharafdg.com/cdn-cgi/image/width=600,height=600,fit=pad/images/S300868182_1?1704801808"
-    },
-    {
-      "id": 3,
-      "brand": "hp",
-      "name": "15S",
-      "price": 1300,
-      "category": "laptop",
-      "rating": 4,
-      "img": "https://object.pscloud.io/cms/cms/Photo/img_0_62_2804_1_6.png"
     }
   ]
 }
