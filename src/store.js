@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit"
-import counterReducer from "./counterSlice"
 import favoritesReducer from "./favoritesSlice"
+import productsReducer from "./productsSlice"
 
 export const store = configureStore({
-  reducer: { counter: counterReducer, favorites: favoritesReducer },
+  reducer: { favorites: favoritesReducer, products: productsReducer },
 })

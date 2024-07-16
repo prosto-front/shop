@@ -3,36 +3,30 @@ import "./App.css"
 import { Route, Routes } from "react-router-dom"
 import { Main } from "./Main"
 import { FavoritePage } from "./FavoritePage"
-import { fetchFavorites } from "./favoritesSlice"
+import {
+  addToFavorites,
+  deleteFavorites,
+  fetchFavorites,
+} from "./favoritesSlice"
 import { useDispatch, useSelector } from "react-redux"
+import { fetchProducts } from "./productsSlice"
 
 function App() {
-  const [products, setProducts] = useState([])
-  const [loading, setLoading] = useState(false)
   const [inputName, setInputName] = useState("")
-
   const [selectedCategory, setSelectedCategory] = useState("")
-  
-  const favorites = useSelector((state) => state.favorites.favorites)
-
   const [openNavbar, setOpenNavbar] = useState(false)
+
+  const favorites = useSelector((state) => state.favorites.favorites)
+  const products = useSelector((state) => state.products.products)
+  const productsLoading = useSelector((state) => state.products.loading)
+
   const dispatch = useDispatch()
 
   useEffect(() => {
-    setLoading(true)
-    fetch(
-      `http://localhost:5000/products?q=${inputName}&category_like=${selectedCategory}`
-    )
-      .then((response) => response.json())
-      .then((result) => {
-        setLoading(false)
-        setProducts(result)
-      })
-      .catch((error) => console.log(error))
+    dispatch(fetchProducts({ inputName, selectedCategory }))
   }, [inputName, selectedCategory])
 
   useEffect(() => {
-    // loadFavorites()
     dispatch(fetchFavorites())
   }, [])
 
@@ -53,19 +47,11 @@ function App() {
     setSelectedCategory(changedCategory)
   }
 
-  const addToFavorites = (product) => {
+  const onClickFavorites = (product) => {
     if (favorites.some((el) => el.id === product.id)) {
-      fetch(`http://localhost:5000/favorites/${product.id}`, {
-        method: "DELETE",
-      }).then(() => dispatch(fetchFavorites()))
+      dispatch(deleteFavorites(product.id))
     } else {
-      fetch(`http://localhost:5000/favorites`, {
-        method: "POST",
-        body: JSON.stringify(product),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }).then(() => dispatch(fetchFavorites()))
+      dispatch(addToFavorites(product))
     }
   }
 
@@ -82,9 +68,9 @@ function App() {
               handleChangeCategory={handleChangeCategory}
               selectedCategory={selectedCategory}
               products={products}
-              addToFavorites={addToFavorites}
+              onClickFavorites={onClickFavorites}
               favoritesIds={favorites.map((i) => i.id)}
-              loading={loading}
+              loading={productsLoading}
             />
           }
         />

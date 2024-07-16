@@ -118,6 +118,15 @@
       "category": "laptop",
       "rating": 5,
       "img": "https://pimcdn.sharafdg.com/cdn-cgi/image/width=600,height=600,fit=pad/images/S300868182_1?1704801808"
+    },
+    {
+      "id": 2,
+      "brand": "samsung",
+      "name": "samsung s24",
+      "price": 2000,
+      "category": "phone",
+      "rating": 5,
+      "img": "https://www.soliton.az/images/articles/2024/01/23/20240123052429310_c1_1.jpg"
     }
   ]
 }

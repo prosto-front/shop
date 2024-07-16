@@ -9,14 +9,13 @@ export const Main = ({
   handleChangeCategory,
   selectedCategory,
   products,
-  addToFavorites,
+  onClickFavorites,
   favoritesIds,
   loading,
 }) => {
   return (
     <>
       <Header handleInput={handleInput} handleOpen={handleOpen} />
-      {loading && <h1>Loading...</h1>}
       {openNavbar && (
         <Navbar
           handleChangeCategory={handleChangeCategory}
@@ -28,7 +27,7 @@ export const Main = ({
         {products.map((product) => (
           <Card
             key={product.id}
-            addToFavorites={addToFavorites}
+            onClickFavorites={onClickFavorites}
             favoritesIds={favoritesIds}
             product={product}
           />
