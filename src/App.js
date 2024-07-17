@@ -1,30 +1,22 @@
 import { useEffect, useState } from "react"
 import "./App.css"
 import { Route, Routes } from "react-router-dom"
-import { Main } from "./Main"
-import { FavoritePage } from "./FavoritePage"
-import {
-  addToFavorites,
-  deleteFavorites,
-  fetchFavorites,
-} from "./favoritesSlice"
-import { useDispatch, useSelector } from "react-redux"
-import { fetchProducts } from "./productsSlice"
+import { Main } from "./pages/main/Main"
+import { FavoritePage } from "./pages/favorite/FavoritePage"
+import { fetchFavorites } from "./pages/favorite/favoritesSlice"
+import { useDispatch } from "react-redux"
+import { fetchProducts } from "./pages/main/productsSlice"
 
 function App() {
   const [inputName, setInputName] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("")
-  const [openNavbar, setOpenNavbar] = useState(false)
-
-  const favorites = useSelector((state) => state.favorites.favorites)
-  const products = useSelector((state) => state.products.products)
-  const productsLoading = useSelector((state) => state.products.loading)
+  const [sort, setSort] = useState("")
 
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(fetchProducts({ inputName, selectedCategory }))
-  }, [inputName, selectedCategory])
+    dispatch(fetchProducts({ inputName, selectedCategory, sort }))
+  }, [inputName, selectedCategory, sort])
 
   useEffect(() => {
     dispatch(fetchFavorites())
@@ -32,10 +24,6 @@ function App() {
 
   const handleInput = (text) => {
     setInputName(text)
-  }
-
-  const handleOpen = () => {
-    setOpenNavbar(!openNavbar)
   }
 
   const handleChangeCategory = (changedCategory) => {
@@ -47,12 +35,13 @@ function App() {
     setSelectedCategory(changedCategory)
   }
 
-  const onClickFavorites = (product) => {
-    if (favorites.some((el) => el.id === product.id)) {
-      dispatch(deleteFavorites(product.id))
-    } else {
-      dispatch(addToFavorites(product))
+  const handleChangeSort = (order) => {
+    if (sort === order) {
+      setSort("")
+      return
     }
+
+    setSort(order)
   }
 
   return (
@@ -62,15 +51,11 @@ function App() {
           path="/"
           element={
             <Main
-              openNavbar={openNavbar}
+              sort={sort}
+              handleChangeSort={handleChangeSort}
               handleInput={handleInput}
-              handleOpen={handleOpen}
               handleChangeCategory={handleChangeCategory}
               selectedCategory={selectedCategory}
-              products={products}
-              onClickFavorites={onClickFavorites}
-              favoritesIds={favorites.map((i) => i.id)}
-              loading={productsLoading}
             />
           }
         />
