@@ -1,16 +1,11 @@
 import { Link } from "react-router-dom"
 import { FavoriteIcon } from "./FavoriteIcon"
+import { ShoppingCartOutlined } from "@ant-design/icons"
 
 export const Header = ({ handleInput, handleOpen }) => {
   return (
     <div className="header">
-      <div>
-        <img
-          width={60}
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAHXPluq6GtTRPDIHRv5kJPy86uFjp5sO7hg&usqp=CAU"
-          alt="здсь фото"
-        />
-      </div>
+      <h1>AM</h1>
       <div onClick={handleOpen}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +22,10 @@ export const Header = ({ handleInput, handleOpen }) => {
         </svg>
       </div>
       <input onChange={(e) => handleInput(e.target.value)} />
-      <Link to='/favorite'>
+      <Link to="/cart">
+        <ShoppingCartOutlined style={{ fontSize: "50px", color: "#fff" }} />
+      </Link>
+      <Link to="/favorite">
         <div className="favoriteIconHeader">
           <FavoriteIcon />
         </div>

@@ -3,7 +3,7 @@
   height: 70px;
   color: #fff;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 10px;
   align-items: center;
 }
@@ -20,10 +20,6 @@
   width: 250px;
   height: 350px;
 }
-
-/* .card div {
-  margin-top: 10px;
-} */
 
 .card-block {
   display: flex;
@@ -55,6 +51,7 @@
 
 .cardIcon {
   margin-right: 25px;
+  margin-bottom: 50px;
 }
 
 .favoriteIconHeader {
