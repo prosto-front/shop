@@ -1,9 +1,17 @@
+@mixin align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin mp-20 {
+  margin: 20px;
+  padding: 20px;
+}
+
 .cartItemBlock {
   display: flex;
   box-shadow: 1px 1px 1px 1px grey;
-  margin: 20px;
-  padding: 20px;
-  /* height: 150px; */
+  @include mp-20;
 }
 
 .cartItemTitle {
@@ -16,8 +24,7 @@
 }
 
 .cartItemQuantity {
-  display: flex;
-  align-items: center;
+  @include align-center;
   margin-right: 130px;
 }
 
@@ -27,17 +34,15 @@
 
 .cartItemPrice {
   width: 100px;
-  display: flex;
-  align-items: center;
+  @include align-center;
   margin-left: auto;
 }
 
 .totalPriceBlock {
   background: rgb(224, 222, 222);
   border-radius: 20px;
-  margin: 20px;
+  @include mp-20;
   margin-top: 50px;
-  padding: 20px;
 }
 
 .totalPriceRow {

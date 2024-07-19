@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux"
 import { ButtonBack } from "../../Components/buttonBack"
 import { CartItem } from "./CartItem"
-import "./index.css"
+import "./index.scss"
 
 export const CartPage = ({ onClickFavorites }) => {
   const { cart } = useSelector((state) => state.cart)

@@ -6,9 +6,9 @@
       "name": "samsung s20",
       "price": 300,
       "category": "phone",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
       "rating": 5,
       "quantity": 1,
-      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
       "img": "https://www.technodom.kz/_next/image?url=https%3A%2F%2Fapi.technodom.kz%2Ff3%2Fapi%2Fv1%2Fimages%2F800%2F800%2Fsmartfon_gsm_samsung_sm_s911bzkgskz_thx_61_50_5_galaxy_s23_256gb_black_269582_1q.jpg&w=3840&q=85"
     },
     {
@@ -17,9 +17,10 @@
       "name": "samsung s24",
       "price": 2000,
       "category": "phone",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+
       "rating": 5,
       "quantity": 1,
-      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
       "img": "https://www.soliton.az/images/articles/2024/01/23/20240123052429310_c1_1.jpg"
     },
     {
@@ -27,10 +28,11 @@
       "brand": "hp",
       "name": "15S",
       "price": 1300,
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+
       "category": "laptop",
       "rating": 4,
       "quantity": 1,
-      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
       "img": "https://object.pscloud.io/cms/cms/Photo/img_0_62_2804_1_6.png"
     },
     {
@@ -38,18 +40,20 @@
       "brand": "philips",
       "name": "S27",
       "price": 770,
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+
       "category": "monitor",
       "rating": 3,
-      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
       "quantity": 1,
       "img": "https://images.officeworks.com.au/api/2/img/https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/PH272S9MON_philips_27_272s9_fhd_ips_75hz_monitor.jpg/resize?size=600&auth=MjA5OTcwODkwMg__"
     },
     {
       "id": 5,
       "brand": "apple",
-      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
       "name": "iphone 13",
       "price": 400,
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+
       "category": "phone",
       "rating": 5,
       "quantity": 1,
@@ -60,8 +64,9 @@
       "brand": "apple",
       "name": "iphone 14",
       "price": 700,
-      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
       "category": "phone",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+
       "rating": 5,
       "quantity": 1,
       "img": "https://www.technodom.kz/_next/image?url=https%3A%2F%2Fapi.technodom.kz%2Ff3%2Fapi%2Fv1%2Fimages%2F800%2F800%2F265302_1hh.jpg&w=3840&q=85"
@@ -69,9 +74,10 @@
     {
       "id": 7,
       "brand": "asus",
-      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
       "name": "Vivobook",
       "price": 1000,
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+
       "category": "laptop",
       "rating": 4,
       "quantity": 1,
@@ -81,10 +87,11 @@
       "id": 8,
       "brand": "asus",
       "name": "tuf",
-      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
       "price": 1500,
       "category": "laptop",
       "rating": 4,
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+
       "quantity": 1,
       "img": "https://object.pscloud.io/cms/cms/Photo/img_0_62_2635_11_1.jpg"
     },
@@ -94,8 +101,9 @@
       "name": "Galaxy Book",
       "price": 1700,
       "category": "laptop",
-      "rating": 5,
       "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+
+      "rating": 5,
       "quantity": 1,
       "img": "https://pimcdn.sharafdg.com/cdn-cgi/image/width=600,height=600,fit=pad/images/S300868182_1?1704801808"
     },
@@ -105,6 +113,7 @@
       "name": "T37",
       "price": 660,
       "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+
       "category": "monitor",
       "rating": 2,
       "quantity": 1,
@@ -114,10 +123,11 @@
       "id": 11,
       "brand": "philips",
       "name": "V243",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+
       "price": 420,
       "category": "monitor",
       "rating": 3,
-      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
       "quantity": 1,
       "img": "https://itmag.kz/upload/iblock/19/05/product_image_5705_1136638.jpg"
     },
@@ -125,9 +135,10 @@
       "id": 12,
       "brand": "samsung",
       "name": "samsung s24",
-      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
       "price": 1900,
       "category": "phone",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+
       "rating": 5,
       "quantity": 1,
       "img": "https://images.samsung.com/hu/smartphones/galaxy-s24-ultra/buy/03_Color-Selection/03-1_Basic-Color/Titanium-Violet-MO.png"
@@ -135,23 +146,13 @@
   ],
   "favorites": [
     {
-      "id": 9,
-      "brand": "samsung",
-      "name": "Galaxy Book",
-      "price": 1700,
-      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
-      "category": "laptop",
-      "rating": 5,
-      "quantity": 1,
-      "img": "https://pimcdn.sharafdg.com/cdn-cgi/image/width=600,height=600,fit=pad/images/S300868182_1?1704801808"
-    },
-    {
       "id": 2,
       "brand": "samsung",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+
       "name": "samsung s24",
       "price": 2000,
       "category": "phone",
-      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
       "rating": 5,
       "quantity": 1,
       "img": "https://www.soliton.az/images/articles/2024/01/23/20240123052429310_c1_1.jpg"
@@ -160,58 +161,51 @@
       "id": 4,
       "brand": "philips",
       "name": "S27",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+
       "price": 770,
       "category": "monitor",
+      "rating": 3,
+      "quantity": 1,
+      "img": "https://images.officeworks.com.au/api/2/img/https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/PH272S9MON_philips_27_272s9_fhd_ips_75hz_monitor.jpg/resize?size=600&auth=MjA5OTcwODkwMg__"
+    }
+  ],
+  "cart": [
+    {
+      "id": 2,
+      "brand": "samsung",
+      "name": "samsung s24",
       "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+
+      "price": 2000,
+      "category": "phone",
+      "rating": 5,
+      "quantity": 1,
+      "img": "https://www.soliton.az/images/articles/2024/01/23/20240123052429310_c1_1.jpg"
+    },
+    {
+      "id": 4,
+      "brand": "philips",
+      "name": "S27",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+
+      "price": 770,
+      "category": "monitor",
       "rating": 3,
       "quantity": 1,
       "img": "https://images.officeworks.com.au/api/2/img/https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/PH272S9MON_philips_27_272s9_fhd_ips_75hz_monitor.jpg/resize?size=600&auth=MjA5OTcwODkwMg__"
     },
     {
-      "id": 8,
-      "brand": "asus",
-      "name": "tuf",
-      "price": 1500,
-      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
-      "category": "laptop",
-      "rating": 4,
-      "quantity": 1,
-      "img": "https://object.pscloud.io/cms/cms/Photo/img_0_62_2635_11_1.jpg"
-    }
-  ],
-  "cart": [
-    {
-      "id": 3,
-      "brand": "hp",
-      "name": "15S",
-      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
-      "price": 1300,
-      "category": "laptop",
-      "rating": 4,
-      "quantity": 1,
-      "img": "https://object.pscloud.io/cms/cms/Photo/img_0_62_2804_1_6.png"
-    },
-    {
-      "id": 8,
-      "brand": "asus",
-      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
-      "name": "tuf",
-      "price": 1500,
-      "category": "laptop",
-      "rating": 4,
-      "quantity": 2,
-      "img": "https://object.pscloud.io/cms/cms/Photo/img_0_62_2635_11_1.jpg"
-    },
-    {
-      "id": 2,
+      "id": 9,
       "brand": "samsung",
-      "name": "samsung s24",
-      "price": 2000,
-      "category": "phone",
+      "name": "Galaxy Book",
+      "price": 1700,
+      "category": "laptop",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+
       "rating": 5,
       "quantity": 1,
-      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
-      "img": "https://www.soliton.az/images/articles/2024/01/23/20240123052429310_c1_1.jpg"
+      "img": "https://pimcdn.sharafdg.com/cdn-cgi/image/width=600,height=600,fit=pad/images/S300868182_1?1704801808"
     }
   ]
 }

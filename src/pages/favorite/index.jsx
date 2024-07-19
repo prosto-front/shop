@@ -1,4 +1,4 @@
-import { Card } from "../../Components/Card"
+import { Card } from "../../Components/productCard"
 import { useSelector } from "react-redux"
 import { ButtonBack } from "../../Components/buttonBack"
 

@@ -1,4 +1,4 @@
-import "./sort.css"
+import "./sort.scss"
 
 export const Sort = ({ handleChangeSort, sort }) => {
   return (

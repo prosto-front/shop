@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
-import { FavoriteIcon } from "./FavoriteIcon"
-import { ShoppingCartOutlined } from "@ant-design/icons"
+import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons"
+import "./index.scss"
 
 export const Header = ({ handleInput, handleOpen }) => {
   return (
@@ -27,7 +27,7 @@ export const Header = ({ handleInput, handleOpen }) => {
       </Link>
       <Link to="/favorite">
         <div className="favoriteIconHeader">
-          <FavoriteIcon />
+          <HeartOutlined style={{ fontSize: "40px", color: "#fff" }} />
         </div>
       </Link>
     </div>
