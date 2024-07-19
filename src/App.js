@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { fetchProducts } from "./pages/main/productsSlice"
 import { CartPage } from "./pages/cart"
 import { loadCart } from "./pages/cart/slices"
+import { Product } from "./pages/product"
 
 function App() {
   const [inputName, setInputName] = useState("")
@@ -78,6 +79,10 @@ function App() {
         />
 
         <Route path="/favorite" element={<FavoritePage />} />
+        <Route
+          path="/product/:id"
+          element={<Product onClickFavorites={onClickFavorites} />}
+        />
         <Route
           path="/cart"
           element={<CartPage onClickFavorites={onClickFavorites} />}

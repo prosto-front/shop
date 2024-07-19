@@ -1,5 +1,6 @@
 import { ShoppingCartOutlined } from "@ant-design/icons"
 import { FavoriteIcon } from "./FavoriteIcon"
+import { Link } from "react-router-dom"
 
 export const Card = ({
   product,
@@ -14,16 +15,19 @@ export const Card = ({
 
   return (
     <div className="card">
-      <img width={200} height={200} src={img} alt="здeсь было фото" />
-      <div className="cardConten">
-        <div>
-          <div>{name}</div>
-          <h3>{brand}</h3>
-          <div>рейтинг: {rating}</div>
-          <h3>${price}</h3>
-        </div>
-
-        <div>
+      <Link to={`/product/${id}`}>
+        <img width={200} height={200} src={img} alt="здeсь было фото" />
+      </Link>
+      <div className="cardContent">
+        <Link className="link" to={`/product/${id}`}>
+          <div>
+            <div>{name}</div>
+            <h3>{brand}</h3>
+            <div>рейтинг: {rating}</div>
+            <h3>${price}</h3>
+          </div>
+        </Link>
+        <div className="iconsMainBlock">
           {favoritesIds && (
             <div className="cardIcon" onClick={() => onClickFavorites(product)}>
               <FavoriteIcon active={favoritesIds.includes(id)} />

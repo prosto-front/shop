@@ -18,7 +18,7 @@ export const Main = ({
 
   const favorites = useSelector((state) => state.favorites.favorites)
   const cartItems = useSelector((state) => state.cart.cart)
-  console.log(cartItems)
+
   const { products, loading } = useSelector((state) => state.products)
 
   const dispatch = useDispatch()
@@ -26,7 +26,6 @@ export const Main = ({
   const handleOpen = () => {
     setOpenNavbar(!openNavbar)
   }
-
 
   const onClickAddToCart = (product) => {
     if (cartItems.some((el) => el.id === product.id)) {

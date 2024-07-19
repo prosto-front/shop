@@ -40,11 +40,12 @@
   padding: 20px;
 }
 
-.navbar div:hover, .active {
+.navbar div:hover,
+.active {
   background: rgb(83, 83, 244);
 }
 
-.cardConten {
+.cardContent {
   display: flex;
   justify-content: space-between;
 }
