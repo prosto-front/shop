@@ -14,12 +14,13 @@ function App() {
   const [inputName, setInputName] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("")
   const [sort, setSort] = useState("")
+  const [price, setPrice] = useState({ priceFrom: null, priceTo: null })
 
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(fetchProducts({ inputName, selectedCategory, sort }))
-  }, [inputName, selectedCategory, sort])
+    dispatch(fetchProducts({ inputName, selectedCategory, sort, price }))
+  }, [inputName, selectedCategory, sort, price])
 
   useEffect(() => {
     dispatch(fetchFavorites())
@@ -55,6 +56,8 @@ function App() {
           path="/"
           element={
             <Main
+              setPrice={setPrice}
+              price={price}
               sort={sort}
               handleChangeSort={handleChangeSort}
               handleInput={handleInput}

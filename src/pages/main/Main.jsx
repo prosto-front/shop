@@ -4,6 +4,7 @@ import { Header } from "../../Components/header"
 import { Navbar } from "../../Components/navbar"
 import { useSelector } from "react-redux"
 import { Sort } from "../../Components/Sort/Sort"
+import { Drawer } from "antd"
 
 export const Main = ({
   handleInput,
@@ -11,6 +12,8 @@ export const Main = ({
   selectedCategory,
   handleChangeSort,
   sort,
+  setPrice,
+  price
 }) => {
   const [openNavbar, setOpenNavbar] = useState(false)
 
@@ -23,12 +26,18 @@ export const Main = ({
   return (
     <>
       <Header handleInput={handleInput} handleOpen={handleOpen} />
-      {openNavbar && (
+      <Drawer
+        open={openNavbar}
+        placement="left"
+        onClose={() => setOpenNavbar(false)}
+      >
         <Navbar
+        price={price}
+          setPrice={setPrice}
           handleChangeCategory={handleChangeCategory}
           selectedCategory={selectedCategory}
         />
-      )}
+      </Drawer>
 
       <Sort sort={sort} handleChangeSort={handleChangeSort} />
 
