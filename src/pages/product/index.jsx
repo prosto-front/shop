@@ -42,7 +42,7 @@ export const Product = () => {
         </div>
       </div>
 
-      <ProductComments productId={id} />
+      <ProductComments productId={product.id} />
     </>
   )
 }

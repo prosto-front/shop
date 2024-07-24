@@ -5,23 +5,20 @@ import { createComment, loadComments } from "../slices"
 import { useDispatch, useSelector } from "react-redux"
 
 export const ProductComments = ({ productId }) => {
-  const [form] = Form.useForm()
-
   const dispatch = useDispatch()
   const { comments } = useSelector((state) => state.product)
+  const [form] = Form.useForm()
 
   const handleFinish = (values) => {
     const date = new Date().toLocaleString()
 
     dispatch(createComment({ ...values, productId, date }))
-
+    
     form.resetFields()
   }
 
   useEffect(() => {
-    if (productId) {
-      dispatch(loadComments(productId))
-    }
+    dispatch(loadComments(productId))
   }, [productId])
 
   return (
