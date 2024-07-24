@@ -4,7 +4,7 @@ import { Header } from "../../Components/header"
 import { Navbar } from "../../Components/navbar"
 import { useSelector } from "react-redux"
 import { Sort } from "../../Components/Sort/Sort"
-import { Drawer } from "antd"
+import { Drawer, Pagination } from "antd"
 
 export const Main = ({
   handleInput,
@@ -13,7 +13,9 @@ export const Main = ({
   handleChangeSort,
   sort,
   setPrice,
-  price
+  price,
+  setPage,
+  page
 }) => {
   const [openNavbar, setOpenNavbar] = useState(false)
 
@@ -32,7 +34,7 @@ export const Main = ({
         onClose={() => setOpenNavbar(false)}
       >
         <Navbar
-        price={price}
+          price={price}
           setPrice={setPrice}
           handleChangeCategory={handleChangeCategory}
           selectedCategory={selectedCategory}
@@ -47,6 +49,7 @@ export const Main = ({
           <Card key={product.id} product={product} />
         ))}
       </div>
+      <Pagination current={page} total={22} onChange={(page) => setPage(page)} />
     </>
   )
 }

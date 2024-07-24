@@ -131,6 +131,116 @@
       "rating": 5,
       "quantity": 1,
       "img": "https://images.samsung.com/hu/smartphones/galaxy-s24-ultra/buy/03_Color-Selection/03-1_Basic-Color/Titanium-Violet-MO.png"
+    },
+    {
+      "id": 13,
+      "brand": "samsung",
+      "name": "samsung fold",
+      "price": 3000,
+      "category": "phone",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+      "rating": 5,
+      "quantity": 1,
+      "img": "https://strgimgr.umico.az/sized/1680/563389-ef12ccd00f8357c92e6373888552a6da.jpg"
+    },
+    {
+      "id": 14,
+      "brand": "samsung",
+      "name": "Galaxy Book 360",
+      "price": 2000,
+      "category": "laptop",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+      "rating": 5,
+      "quantity": 1,
+      "img": "https://images.samsung.com/is/image/samsung/assets/uk/galaxy-book/buy/02_image-carousel/product-kv/book-pro-360/GalaxyBook_Pro360_Navy_ProductKV_Dynamic_MO_img.jpg?imbypass=true"
+    },
+    {
+      "id": 15,
+      "brand": "samsung",
+      "name": "samsung lc32",
+      "price": 800,
+      "category": "monitor",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+      "rating": 5,
+      "quantity": 1,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9yhWZVcn4-rm0ZLo9Q2aunJfU57ebTOB6UwDNhtNTovZADCL3PbrKzCC00pny9HxmnzI&usqp=CAU"
+    },
+    {
+      "id": 22,
+      "brand": "samsung",
+      "name": "z flip",
+      "price": 2500,
+      "category": "phone",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+      "rating": 5,
+      "quantity": 1,
+      "img": "https://m.media-amazon.com/images/I/61OOF+0pGlL.jpg"
+    },
+    {
+      "id": 16,
+      "brand": "xiaomi",
+      "name": "xiaomi 12 ultra",
+      "price": 1600,
+      "category": "phone",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+      "rating": 4,
+      "quantity": 1,
+      "img": "https://product.hstatic.net/200000547251/product/mi-11-ultra_0cae210d1f8c4d1c9654e43322ae69ae_master.jpg"
+    },
+    {
+      "id": 17,
+      "brand": "xiaomi",
+      "name": "xiaomi 14",
+      "price": 1900,
+      "category": "phone",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+      "rating": 5,
+      "quantity": 1,
+      "img": "https://kontakt.az/media/catalog/product/cache/b34559cb8eb520f2bea0d3245ba154fd/t/m/tm-dg-sbp-1105-sm-2733_1.png"
+    },
+    {
+      "id": 18,
+      "brand": "xiaomi",
+      "name": "xiaomi 14 ultra",
+      "price": 2000,
+      "category": "phone",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+      "rating": 4,
+      "quantity": 1,
+      "img": "https://www.miuruguay.com.uy/wp-content/uploads/2024/04/xiaomi14Ultra_00.jpg"
+    },
+    {
+      "id": 19,
+      "brand": "asus",
+      "name": "asus rog 16",
+      "price": 2300,
+      "category": "laptop",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+      "rating": 5,
+      "quantity": 1,
+      "img": "https://i5.walmartimages.com/seo/ASUS-ROG-16-FHD-165Hz-Gaming-Laptop-Intel-Core-i7-with-16GB-DDR4-Memory-and-512GB-SSD-NVIDIA-GeForce-RTX-4060-Eclipse-Gray_db9bba32-4e61-4a5f-a21e-1569baca201b.156386173474c3d9bbdd4d1b26848f4e.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"
+    },
+    {
+      "id": 20,
+      "brand": "asus",
+      "name": "rog zephyrus ",
+      "price": 3760,
+      "category": "laptop",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+      "rating": 5,
+      "quantity": 1,
+      "img": "https://www.asus.com/media/Odin/Websites/global/ProductLine/20200824120814.jpg"
+    },
+    {
+      "id": 21,
+      "brand": "lg",
+      "name": "29 ultra",
+      "price": 990,
+      "category": "monitor",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+      "rating": 5,
+      "quantity": 1,
+      "img": "https://www.lg.com/content/dam/channel/wcms/kz/images/monitors/29wl500-b_adk_eeak_kz_c/29WL500-B_ADK_EEAK_KZ_C-450x450.jpg"
     }
   ],
   "favorites": [
