@@ -6,17 +6,7 @@ import { useSelector } from "react-redux"
 import { Sort } from "../../Components/Sort/Sort"
 import { Drawer, Pagination } from "antd"
 
-export const Main = ({
-  handleInput,
-  handleChangeCategory,
-  selectedCategory,
-  handleChangeSort,
-  sort,
-  setPrice,
-  price,
-  setPage,
-  page
-}) => {
+export const Main = ({ searchParams, handleChangeFilters }) => {
   const [openNavbar, setOpenNavbar] = useState(false)
 
   const { products, loading } = useSelector((state) => state.products)
@@ -27,21 +17,26 @@ export const Main = ({
 
   return (
     <>
-      <Header handleInput={handleInput} handleOpen={handleOpen} />
+      <Header
+        handleChangeFilters={handleChangeFilters}
+        handleOpen={handleOpen}
+        searchParams={searchParams}
+      />
       <Drawer
         open={openNavbar}
         placement="left"
         onClose={() => setOpenNavbar(false)}
       >
         <Navbar
-          price={price}
-          setPrice={setPrice}
-          handleChangeCategory={handleChangeCategory}
-          selectedCategory={selectedCategory}
+          handleChangeFilters={handleChangeFilters}
+          searchParams={searchParams}
         />
       </Drawer>
 
-      <Sort sort={sort} handleChangeSort={handleChangeSort} />
+      <Sort
+        searchParams={searchParams}
+        handleChangeFilters={handleChangeFilters}
+      />
 
       {loading && <h1>Loading...</h1>}
       <div className="card-block">
@@ -49,7 +44,11 @@ export const Main = ({
           <Card key={product.id} product={product} />
         ))}
       </div>
-      <Pagination current={page} total={22} onChange={(page) => setPage(page)} />
+      <Pagination
+        current={searchParams.get("_page")}
+        total={22}
+        onChange={(page) => handleChangeFilters("_page", page)}
+      />
     </>
   )
 }

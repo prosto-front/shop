@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons"
 import "./index.scss"
 
-export const Header = ({ handleInput, handleOpen }) => {
+export const Header = ({ handleChangeFilters, handleOpen, searchParams }) => {
   return (
     <div className="header">
       <h1>AM</h1>
@@ -21,7 +21,10 @@ export const Header = ({ handleInput, handleOpen }) => {
           ></path>
         </svg>
       </div>
-      <input onChange={(e) => handleInput(e.target.value)} />
+      <input
+        onChange={(e) => handleChangeFilters("q", e.target.value)}
+        value={searchParams.get("q") || ''}
+      />
       <Link to="/cart">
         <ShoppingCartOutlined style={{ fontSize: "50px", color: "#fff" }} />
       </Link>
