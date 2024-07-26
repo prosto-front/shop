@@ -6,13 +6,13 @@ export const Sort = ({ handleChangeFilters, searchParams }) => {
     <div className="sort">
       <span>Сортировка по цене:</span>
       <span
-        onClick={() => handleChangeFilters("sort", "asc")}
+        onClick={() => handleChangeFilters("_order", "asc")}
         className={selectedSort === "asc" ? "sortActive" : ""}
       >
         По возрастанию
       </span>
       <span
-        onClick={() => handleChangeFilters("sort", "desc")}
+        onClick={() => handleChangeFilters("_order", "desc")}
         className={selectedSort === "desc" ? "sortActive" : ""}
       >
         По убыванию{" "}

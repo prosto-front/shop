@@ -20,7 +20,8 @@ function App() {
   const handleChangeFilters = (key, value) => {
     if (copyParams.get(key) === value || !value) {
       copyParams.delete(key)
-    } else if (key === "sort") {
+      key === "_order" && copyParams.delete('_sort')
+    } else if (key === "_order") {
       copyParams.set("_sort", "price")
       copyParams.set("_order", value)
     } else {
