@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom"
 import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons"
 import "./index.scss"
+import { debounce } from "lodash"
+import { Input } from "antd"
 
 export const Header = ({ handleChangeFilters, handleOpen, searchParams }) => {
+  const debouncedHandler = debounce(
+    (e) => handleChangeFilters("q", e.target.value),
+    700
+  )
+
   return (
     <div className="header">
       <h1>AM</h1>
@@ -21,9 +28,9 @@ export const Header = ({ handleChangeFilters, handleOpen, searchParams }) => {
           ></path>
         </svg>
       </div>
-      <input
-        onChange={(e) => handleChangeFilters("q", e.target.value)}
-        value={searchParams.get("q") || ''}
+      <Input
+        onChange={debouncedHandler}
+        defaultValue={searchParams.get("q") || ""}
       />
       <Link to="/cart">
         <ShoppingCartOutlined style={{ fontSize: "50px", color: "#fff" }} />

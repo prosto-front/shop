@@ -2,8 +2,9 @@ import { Link } from "react-router-dom"
 import { ToFavoriteButton } from "../toFavoriteButton"
 import { ToCartButton } from "../toCardButton"
 import "./index.scss"
+import { memo } from "react"
 
-export const Card = ({ product }) => {
+export const Card = memo(({ product }) => {
   const { name, brand, price, img, rating, id } = product
 
   return (
@@ -27,4 +28,4 @@ export const Card = ({ product }) => {
       </div>
     </div>
   )
-}
+})

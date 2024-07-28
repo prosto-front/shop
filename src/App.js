@@ -34,7 +34,7 @@ function App() {
 
     setSearchParams(copyParams)
   }
-
+  
 
   useEffect(() => {
     if (searchParams) {

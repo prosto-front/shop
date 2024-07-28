@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useCallback, useMemo, useState } from "react"
 import { Card } from "../../Components/productCard"
 import { Header } from "../../Components/header"
 import { Navbar } from "../../Components/navbar"
