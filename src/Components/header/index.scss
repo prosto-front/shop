@@ -1,15 +1,56 @@
 .header {
-    background: rgb(52, 52, 236);
-    height: 70px;
-    color: #fff;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    align-items: center;
+  background: rgb(52, 52, 236);
+  height: 70px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
 
-    input {
-      height: 33px;
-      width: 800px;
+  input {
+    height: 33px;
+    width: 70%;
+  }
+
+  .headerIcons {
+    display: flex;
+
+    span,
+    .logo {
+      margin-left: 30px;
     }
   }
-  
+
+  .logo {
+    margin: 0 30px;
+  }
+
+  .menuIcon {
+    font-size: 40px;
+    margin: 0 30px;
+  }
+
+  .menuIconWrapper {
+    position: relative;
+  }
+
+  .circle {
+    right: 15px;
+    bottom: 33px;
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background: greenyellow;
+    border-radius: 50%;
+  }
+
+  .iconQuantity {
+    font-size: 18px;
+    margin-left: -25px;
+    margin-top: -15px;
+  }
+
+  .favoriteIconHeader {
+    margin-top: 4px;
+  }
+}

@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom"
-import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons"
+import {
+  HeartOutlined,
+  MenuOutlined,
+  SearchOutlined,
+  ShoppingCartOutlined,
+} from "@ant-design/icons"
 import "./index.scss"
 import { debounce } from "lodash"
 import { Input } from "antd"
+import { useSelector } from "react-redux"
 
 export const Header = ({ handleChangeFilters, handleOpen, searchParams }) => {
   const debouncedHandler = debounce(
@@ -10,36 +16,54 @@ export const Header = ({ handleChangeFilters, handleOpen, searchParams }) => {
     700
   )
 
+  const { cart } = useSelector((state) => state.cart)
+  const { favorites } = useSelector((state) => state.favorites)
+
+  const productCartQuantitty = cart.reduce(
+    (acc, product) => acc + product.quantity,
+    0
+  )
+  const productFavoriteQuantitty = favorites.reduce(
+    (acc, product) => acc + product.quantity,
+    0
+  )
+
+  const filters =
+    searchParams.get("category") ||
+    searchParams.get("price_gte") ||
+    searchParams.get("price_lte")
+
   return (
     <div className="header">
-      <h1>AM</h1>
-      <div onClick={handleOpen}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
-          width="60"
-          height="60"
-          viewBox="0 0 48 48"
-        >
-          <path
-            fill="#fff"
-            d="M6 22H42V26H6zM6 10H42V14H6zM6 34H42V38H6z"
-          ></path>
-        </svg>
+      <h1 className="logo">AM</h1>
+      <div className="menuIconWrapper">
+        {filters && <div className="circle" />}
+        <div onClick={handleOpen}>
+          <MenuOutlined className="menuIcon" />
+        </div>
       </div>
       <Input
+        size={"small"}
+        prefixCls={<SearchOutlined />}
         onChange={debouncedHandler}
         defaultValue={searchParams.get("q") || ""}
       />
-      <Link to="/cart">
-        <ShoppingCartOutlined style={{ fontSize: "50px", color: "#fff" }} />
-      </Link>
-      <Link to="/favorite">
-        <div className="favoriteIconHeader">
-          <HeartOutlined style={{ fontSize: "40px", color: "#fff" }} />
-        </div>
-      </Link>
+      <div className="headerIcons">
+        <Link className="link" to="/cart">
+          <ShoppingCartOutlined style={{ fontSize: "50px", color: "#fff" }} />
+        </Link>
+        {!!productCartQuantitty && (
+          <div className="iconQuantity">{productCartQuantitty}</div>
+        )}
+        <Link className="link" to="/favorite">
+          <div className="favoriteIconHeader">
+            <HeartOutlined style={{ fontSize: "40px", color: "#fff" }} />
+          </div>
+        </Link>
+        {!!productFavoriteQuantitty && (
+          <div className="iconQuantity">{productFavoriteQuantitty}</div>
+        )}
+      </div>
     </div>
   )
 }

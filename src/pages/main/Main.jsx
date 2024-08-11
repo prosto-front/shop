@@ -1,10 +1,10 @@
-import { useCallback, useMemo, useState } from "react"
+import { useState } from "react"
 import { Card } from "../../Components/productCard"
 import { Header } from "../../Components/header"
 import { Navbar } from "../../Components/navbar"
 import { useSelector } from "react-redux"
 import { Sort } from "../../Components/Sort/Sort"
-import { Drawer, Pagination } from "antd"
+import { Drawer, Pagination, Card as CardAntd } from "antd"
 
 export const Main = ({ searchParams, handleChangeFilters }) => {
   const [openNavbar, setOpenNavbar] = useState(false)
@@ -37,12 +37,31 @@ export const Main = ({ searchParams, handleChangeFilters }) => {
         searchParams={searchParams}
         handleChangeFilters={handleChangeFilters}
       />
-
-      {loading && <h1>Loading...</h1>}
       <div className="card-block">
-        {products.map((product) => (
-          <Card key={product.id} product={product} />
-        ))}
+        {loading ? (
+          <div
+            style={{
+              display: "flex",
+              margin: 50,
+              gap: 30
+            }}
+          >
+            {[...Array(5).keys()].map((i) => (
+              <CardAntd
+                loading
+                style={{
+                  minWidth: 270,
+                }}
+              />
+            ))}
+          </div>
+        ) : (
+          <>
+            {products.map((product) => (
+              <Card key={product.id} product={product} />
+            ))}
+          </>
+        )}
       </div>
       <Pagination
         current={searchParams.get("_page")}

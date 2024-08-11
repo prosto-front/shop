@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import "./App.scss"
 import { Route, Routes, useSearchParams } from "react-router-dom"
 import { Main } from "./pages/main/Main"
@@ -34,7 +34,7 @@ function App() {
 
     setSearchParams(copyParams)
   }
-  
+
 
   useEffect(() => {
     if (searchParams) {

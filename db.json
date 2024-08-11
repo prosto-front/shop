@@ -247,24 +247,13 @@
     {
       "id": 2,
       "brand": "samsung",
-      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
       "name": "samsung s24",
       "price": 2000,
       "category": "phone",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
       "rating": 5,
       "quantity": 1,
       "img": "https://www.soliton.az/images/articles/2024/01/23/20240123052429310_c1_1.jpg"
-    },
-    {
-      "id": 4,
-      "brand": "philips",
-      "name": "S27",
-      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
-      "price": 770,
-      "category": "monitor",
-      "rating": 3,
-      "quantity": 1,
-      "img": "https://images.officeworks.com.au/api/2/img/https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/PH272S9MON_philips_27_272s9_fhd_ips_75hz_monitor.jpg/resize?size=600&auth=MjA5OTcwODkwMg__"
     }
   ],
   "cart": [
@@ -300,6 +289,28 @@
       "rating": 5,
       "quantity": 1,
       "img": "https://pimcdn.sharafdg.com/cdn-cgi/image/width=600,height=600,fit=pad/images/S300868182_1?1704801808"
+    },
+    {
+      "id": 20,
+      "brand": "asus",
+      "name": "rog zephyrus ",
+      "price": 3760,
+      "category": "laptop",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+      "rating": 5,
+      "quantity": 1,
+      "img": "https://www.asus.com/media/Odin/Websites/global/ProductLine/20200824120814.jpg"
+    },
+    {
+      "id": 21,
+      "brand": "lg",
+      "name": "29 ultra",
+      "price": 990,
+      "category": "monitor",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+      "rating": 5,
+      "quantity": 1,
+      "img": "https://www.lg.com/content/dam/channel/wcms/kz/images/monitors/29wl500-b_adk_eeak_kz_c/29WL500-B_ADK_EEAK_KZ_C-450x450.jpg"
     }
   ],
   "comments": [

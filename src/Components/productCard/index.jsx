@@ -9,7 +9,7 @@ export const Card = memo(({ product }) => {
 
   return (
     <div className="card">
-      <Link to={`/product/${id}`}>
+      <Link className="link" to={`/product/${id}`}>
         <img width={200} height={200} src={img} alt="здeсь было фото" />
       </Link>
       <div className="cardContent">

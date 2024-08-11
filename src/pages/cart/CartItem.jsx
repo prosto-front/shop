@@ -20,7 +20,7 @@ export const CartItem = ({ product }) => {
 
   return (
     <div className="cartItemBlock">
-      <Link to={`/product/${id}`}>
+      <Link className="link" to={`/product/${id}`}>
         <img width={100} height={100} src={img} alt="здeсь было фото" />
       </Link>
       <Link className="link" to={`/product/${id}`}>

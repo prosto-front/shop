@@ -3,6 +3,7 @@ import "./index.scss"
 import { useEffect } from "react"
 import { createComment, loadComments } from "../slices"
 import { useDispatch, useSelector } from "react-redux"
+import { UserOutlined } from "@ant-design/icons"
 
 export const ProductComments = ({ productId }) => {
   const dispatch = useDispatch()
@@ -13,7 +14,7 @@ export const ProductComments = ({ productId }) => {
     const date = new Date().toLocaleString()
 
     dispatch(createComment({ ...values, productId, date }))
-    
+
     form.resetFields()
   }
 
@@ -26,7 +27,10 @@ export const ProductComments = ({ productId }) => {
       <h1>Комментарии</h1>
       <Form form={form} onFinish={handleFinish}>
         <Form.Item name="userName">
-          <Input placeholder="Укажите имя" />
+          <Input
+            prefix={<UserOutlined style={{ fontSize: "15px" }} />}
+            placeholder="Укажите имя"
+          />
         </Form.Item>
         <Form.Item name="text">
           <Input.TextArea placeholder="Комментарий" />
