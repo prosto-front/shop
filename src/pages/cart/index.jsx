@@ -12,6 +12,10 @@ export const CartPage = ({ onClickFavorites }) => {
   )
 
   const productCount = cart.reduce((acc, product) => acc + product.quantity, 0)
+  
+  const foo = (count) => {
+    return count
+  }
 
   return (
     <div>
@@ -38,7 +42,7 @@ export const CartPage = ({ onClickFavorites }) => {
           <h3 className="totalPrice">${totalPrice}</h3>
         </div>
       </div>
-      <ButtonBack />
+      <ButtonBack id={12} foo={foo} />
     </div>
   )
 }
