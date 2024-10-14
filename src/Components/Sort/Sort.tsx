@@ -1,7 +1,13 @@
 import "./sort.scss"
 
-export const Sort = ({ handleChangeFilters, searchParams }) => {
+type Props = {
+  handleChangeFilters: (a: string, b: string) => void
+  searchParams: URLSearchParams 
+}
+
+export const Sort = ({ handleChangeFilters, searchParams }: Props) => {
   const selectedSort = searchParams.get("_order")
+  
   return (
     <div className="sort">
       <span>Сортировка по цене:</span>

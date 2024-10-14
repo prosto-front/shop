@@ -2,11 +2,16 @@ import { Flex, Input } from "antd"
 import "./index.scss"
 import { debounce } from "lodash"
 
-export const Navbar = ({ handleChangeFilters, searchParams }) => {
+type Props = {
+  handleChangeFilters: (a: string, b: string) => void
+  searchParams: URLSearchParams
+}
+
+export const Navbar = ({ handleChangeFilters, searchParams }: Props) => {
   const selectedCategory = searchParams.get("category")
 
   const debouncedHandlerPrice = debounce(
-    (key, value) => handleChangeFilters(key, value),
+    (key: string, value: string) => handleChangeFilters(key, value),
     700
   )
 
@@ -38,12 +43,12 @@ export const Navbar = ({ handleChangeFilters, searchParams }) => {
         <Flex gap="middle">
           <Input
             onChange={(e) => debouncedHandlerPrice("price_gte", e.target.value)}
-            defaultValue={searchParams.get("price_gte")}
+            defaultValue={searchParams.get("price_gte") || ""}
           />
           -
           <Input
             onChange={(e) => debouncedHandlerPrice("price_lte", e.target.value)}
-            defaultValue={searchParams.get("price_lte")}
+            defaultValue={searchParams.get("price_lte") || ""}
           />
         </Flex>
       </div>

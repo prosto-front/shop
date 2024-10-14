@@ -3,7 +3,7 @@ import { ButtonBack } from "../../Components/buttonBack"
 import { CartItem } from "./CartItem"
 import "./index.scss"
 
-export const CartPage = ({ onClickFavorites }) => {
+export const CartPage = () => {
   const { cart } = useSelector((state) => state.cart)
 
   const totalPrice = cart.reduce(
@@ -25,7 +25,6 @@ export const CartPage = ({ onClickFavorites }) => {
             <CartItem
               key={el.id}
               product={el}
-              onClickFavorites={onClickFavorites}
             />
           ))
         ) : (

@@ -17,10 +17,10 @@ function App() {
 
   const copyParams = new URLSearchParams(searchParams)
 
-  const handleChangeFilters = (key, value) => {
+  const handleChangeFilters = (key: string, value: string) => {
     if (copyParams.get(key) === value || !value) {
       copyParams.delete(key)
-      key === "_order" && copyParams.delete('_sort')
+      key === "_order" && copyParams.delete("_sort")
     } else if (key === "_order") {
       copyParams.set("_sort", "price")
       copyParams.set("_order", value)
@@ -34,7 +34,6 @@ function App() {
 
     setSearchParams(copyParams)
   }
-
 
   useEffect(() => {
     if (searchParams) {

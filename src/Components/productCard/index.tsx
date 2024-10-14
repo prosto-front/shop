@@ -4,7 +4,20 @@ import { ToCartButton } from "../toCardButton"
 import "./index.scss"
 import { memo } from "react"
 
-export const Card = memo(({ product }) => {
+type ProductType = {
+  name: string
+  brand: string
+  price: number
+  img: string
+  rating: number
+  id: number
+}
+
+type Props = {
+  product: ProductType
+}
+
+export const Card = memo(({ product }: Props) => {
   const { name, brand, price, img, rating, id } = product
 
   return (
