@@ -1,13 +1,10 @@
 import { Flex, Input } from "antd"
 import "./index.scss"
 import { debounce } from "lodash"
+import { SearchParamProps } from "../../types";
 
-type Props = {
-  handleChangeFilters: (a: string, b: string) => void
-  searchParams: URLSearchParams
-}
 
-export const Navbar = ({ handleChangeFilters, searchParams }: Props) => {
+export const Navbar = ({ handleChangeFilters, searchParams }: SearchParamProps) => {
   const selectedCategory = searchParams.get("category")
 
   const debouncedHandlerPrice = debounce(

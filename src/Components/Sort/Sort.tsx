@@ -1,11 +1,8 @@
+import { SearchParamProps } from "../../types";
 import "./sort.scss"
 
-type Props = {
-  handleChangeFilters: (a: string, b: string) => void
-  searchParams: URLSearchParams 
-}
 
-export const Sort = ({ handleChangeFilters, searchParams }: Props) => {
+export const Sort = ({ handleChangeFilters, searchParams }: SearchParamProps) => {
   const selectedSort = searchParams.get("_order")
   
   return (

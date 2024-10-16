@@ -1,8 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
+import { ProductType } from "../../types";
 
-export const fetchProducts = createAsyncThunk(
+export const fetchProducts = createAsyncThunk<ProductType[], string>(
   "products/fetchProducts",
-  async (params, thunkAPI) => {
+  async (params) => {
     const response = await fetch(`http://localhost:5000/products?${params}`)
 
     const result = await response.json()
@@ -10,7 +11,12 @@ export const fetchProducts = createAsyncThunk(
   }
 )
 
-const initialState = {
+type InitialStateType = {
+  loading: boolean
+  products: ProductType[]
+}
+
+const initialState: InitialStateType = {
   loading: false,
   products: [],
 }
@@ -29,6 +35,7 @@ export const productsSlice = createSlice({
       state.products = action.payload
     })
   },
+  reducers: {},
 })
 
 export default productsSlice.reducer

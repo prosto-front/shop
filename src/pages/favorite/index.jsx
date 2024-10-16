@@ -1,9 +1,9 @@
 import { Card } from "../../Components/productCard"
-import { useSelector } from "react-redux"
+import { useAppSelector } from '../../reduxHooks'
 import { ButtonBack } from "../../Components/buttonBack"
 
 export const FavoritePage = () => {
-  const favorites = useSelector((state) => state.favorites.favorites)
+  const favorites = useAppSelector((state) => state.favorites.favorites)
 
   return (
     <div>

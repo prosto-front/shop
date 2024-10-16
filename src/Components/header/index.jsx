@@ -8,7 +8,7 @@ import {
 import "./index.scss"
 import { debounce } from "lodash"
 import { Input } from "antd"
-import { useSelector } from "react-redux"
+import { useAppSelector } from '../../reduxHooks'
 
 export const Header = ({ handleChangeFilters, handleOpen, searchParams }) => {
   const debouncedHandler = debounce(
@@ -16,8 +16,8 @@ export const Header = ({ handleChangeFilters, handleOpen, searchParams }) => {
     700
   )
 
-  const { cart } = useSelector((state) => state.cart)
-  const { favorites } = useSelector((state) => state.favorites)
+  const { cart } = useAppSelector((state) => state.cart)
+  const { favorites } = useAppSelector((state) => state.favorites)
 
   const productCartQuantitty = cart.reduce(
     (acc, product) => acc + product.quantity,

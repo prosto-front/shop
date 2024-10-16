@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux"
+import { useAppDispatch, useAppSelector } from '../../reduxHooks'
 import {
   addToFavorites,
   deleteFavorites,
@@ -6,9 +6,9 @@ import {
 import { HeartFilled, HeartOutlined } from "@ant-design/icons"
 
 export const ToFavoriteButton = ({ product }) => {
-  const { favorites } = useSelector((state) => state.favorites)
+  const { favorites } = useAppSelector((state) => state.favorites)
 
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   const onClickFavorites = () => {
     if (favorites.some((el) => el.id === product.id)) {

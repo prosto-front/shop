@@ -2,15 +2,20 @@ import { Button, Form, Input } from "antd"
 import "./index.scss"
 import { useEffect } from "react"
 import { createComment, loadComments } from "../slices"
-import { useDispatch, useSelector } from "react-redux"
+import { useAppDispatch, useAppSelector } from "../../../reduxHooks"
 import { UserOutlined } from "@ant-design/icons"
 
-export const ProductComments = ({ productId }) => {
-  const dispatch = useDispatch()
-  const { comments } = useSelector((state) => state.product)
+type CommentForm = {
+  userName: string
+  text: string
+}
+
+export const ProductComments = ({ productId }: { productId: number }) => {
+  const dispatch = useAppDispatch()
+  const { comments } = useAppSelector((state) => state.product)
   const [form] = Form.useForm()
 
-  const handleFinish = (values) => {
+  const handleFinish = (values: CommentForm) => {
     const date = new Date().toLocaleString()
 
     dispatch(createComment({ ...values, productId, date }))

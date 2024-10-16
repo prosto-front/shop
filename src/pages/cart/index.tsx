@@ -1,10 +1,10 @@
-import { useSelector } from "react-redux"
+import { useAppSelector } from '../../reduxHooks'
 import { ButtonBack } from "../../Components/buttonBack"
 import { CartItem } from "./CartItem"
 import "./index.scss"
 
 export const CartPage = () => {
-  const { cart } = useSelector((state) => state.cart)
+  const { cart } = useAppSelector((state) => state.cart)
 
   const totalPrice = cart.reduce(
     (acc, product) => acc + product.quantity * product.price,
@@ -12,10 +12,6 @@ export const CartPage = () => {
   )
 
   const productCount = cart.reduce((acc, product) => acc + product.quantity, 0)
-  
-  const foo = (count) => {
-    return count
-  }
 
   return (
     <div>
@@ -41,7 +37,7 @@ export const CartPage = () => {
           <h3 className="totalPrice">${totalPrice}</h3>
         </div>
       </div>
-      <ButtonBack id={12} foo={foo} />
+      <ButtonBack />
     </div>
   )
 }

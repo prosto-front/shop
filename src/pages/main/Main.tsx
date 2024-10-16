@@ -2,14 +2,18 @@ import { useState } from "react"
 import { Card } from "../../Components/productCard"
 import { Header } from "../../Components/header"
 import { Navbar } from "../../Components/navbar"
-import { useSelector } from "react-redux"
+import { useAppSelector } from "../../reduxHooks"
 import { Sort } from "../../Components/Sort/Sort"
 import { Drawer, Pagination, Card as CardAntd } from "antd"
+import { SearchParamProps } from "../../types"
 
-export const Main = ({ searchParams, handleChangeFilters }) => {
+export const Main = ({
+  searchParams,
+  handleChangeFilters,
+}: SearchParamProps) => {
   const [openNavbar, setOpenNavbar] = useState(false)
 
-  const { products, loading } = useSelector((state) => state.products)
+  const { products, loading } = useAppSelector((state) => state.products)
 
   const handleOpen = () => {
     setOpenNavbar(!openNavbar)
@@ -43,11 +47,12 @@ export const Main = ({ searchParams, handleChangeFilters }) => {
             style={{
               display: "flex",
               margin: 50,
-              gap: 30
+              gap: 30,
             }}
           >
             {[...Array(5).keys()].map((i) => (
               <CardAntd
+                key={i}
                 loading
                 style={{
                   minWidth: 270,
@@ -64,9 +69,11 @@ export const Main = ({ searchParams, handleChangeFilters }) => {
         )}
       </div>
       <Pagination
-        current={searchParams.get("_page")}
+        current={
+          searchParams.get("_page") ? Number(searchParams.get("_page")) : 1
+        }
         total={22}
-        onChange={(page) => handleChangeFilters("_page", page)}
+        onChange={(page) => handleChangeFilters("_page", String(page))}
       />
     </>
   )

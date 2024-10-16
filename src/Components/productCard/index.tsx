@@ -3,15 +3,7 @@ import { ToFavoriteButton } from "../toFavoriteButton"
 import { ToCartButton } from "../toCardButton"
 import "./index.scss"
 import { memo } from "react"
-
-type ProductType = {
-  name: string
-  brand: string
-  price: number
-  img: string
-  rating: number
-  id: number
-}
+import { ProductType } from "../../types"
 
 type Props = {
   product: ProductType

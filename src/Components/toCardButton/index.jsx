@@ -1,11 +1,11 @@
 import { ShoppingCartOutlined } from "@ant-design/icons"
-import { useDispatch, useSelector } from "react-redux"
+import { useAppDispatch, useAppSelector } from '../../reduxHooks'
 import { addToCart, deleteFromCart } from "../../pages/cart/slices"
 
 export const ToCartButton = ({ product }) => {
-  const cartItems = useSelector((state) => state.cart.cart)
+  const cartItems = useAppSelector((state) => state.cart.cart)
 
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   const onClickAddToCart = () => {
     if (cartItems.some((el) => el.id === product.id)) {
