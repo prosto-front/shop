@@ -1,8 +1,9 @@
 import { ShoppingCartOutlined } from "@ant-design/icons"
-import { useAppDispatch, useAppSelector } from '../../reduxHooks'
+import { useAppDispatch, useAppSelector } from "../../reduxHooks"
 import { addToCart, deleteFromCart } from "../../pages/cart/slices"
+import { ProductType } from "../../types"
 
-export const ToCartButton = ({ product }) => {
+export const ToCartButton = ({ product }: { product: ProductType }) => {
   const cartItems = useAppSelector((state) => state.cart.cart)
 
   const dispatch = useAppDispatch()

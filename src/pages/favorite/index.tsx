@@ -1,5 +1,5 @@
 import { Card } from "../../Components/productCard"
-import { useAppSelector } from '../../reduxHooks'
+import { useAppSelector } from "../../reduxHooks"
 import { ButtonBack } from "../../Components/buttonBack"
 
 export const FavoritePage = () => {

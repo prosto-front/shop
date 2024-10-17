@@ -254,6 +254,17 @@
       "rating": 5,
       "quantity": 1,
       "img": "https://www.soliton.az/images/articles/2024/01/23/20240123052429310_c1_1.jpg"
+    },
+    {
+      "id": 3,
+      "brand": "hp",
+      "name": "15S",
+      "price": 1300,
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+      "category": "laptop",
+      "rating": 4,
+      "quantity": 1,
+      "img": "https://object.pscloud.io/cms/cms/Photo/img_0_62_2804_1_6.png"
     }
   ],
   "cart": [
@@ -311,6 +322,17 @@
       "rating": 5,
       "quantity": 1,
       "img": "https://www.lg.com/content/dam/channel/wcms/kz/images/monitors/29wl500-b_adk_eeak_kz_c/29WL500-B_ADK_EEAK_KZ_C-450x450.jpg"
+    },
+    {
+      "id": 1,
+      "brand": "samsung",
+      "name": "samsung s20",
+      "price": 300,
+      "category": "phone",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+      "rating": 5,
+      "quantity": 1,
+      "img": "https://image-us.samsung.com/SamsungUS/sis/S20/mweb/4.jpg"
     }
   ],
   "comments": [
@@ -418,6 +440,13 @@
       "productId": 2,
       "date": "16.10.2024, 17:56:13",
       "id": 15
+    },
+    {
+      "userName": "vfvf",
+      "text": "fvvf",
+      "productId": 2,
+      "date": "16.10.2024, 20:54:46",
+      "id": 16
     }
   ]
 }

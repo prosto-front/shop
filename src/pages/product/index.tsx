@@ -3,8 +3,8 @@ import { loadProduct } from "./slices"
 import { useAppDispatch, useAppSelector } from "../../reduxHooks"
 import { useEffect } from "react"
 import "./index.scss"
-import { ToCartButton } from "../../Components/toCardButton/index.jsx"
-import { ToFavoriteButton } from "../../Components/toFavoriteButton/index.jsx"
+import { ToCartButton } from "../../Components/toCardButton"
+import { ToFavoriteButton } from "../../Components/toFavoriteButton"
 import { ProductComments } from "./comments"
 
 export const Product = () => {

@@ -1,11 +1,12 @@
-import { useAppDispatch, useAppSelector } from '../../reduxHooks'
+import { useAppDispatch, useAppSelector } from "../../reduxHooks"
 import {
   addToFavorites,
   deleteFavorites,
 } from "../../pages/favorite/favoritesSlice"
 import { HeartFilled, HeartOutlined } from "@ant-design/icons"
+import { ProductType } from "../../types"
 
-export const ToFavoriteButton = ({ product }) => {
+export const ToFavoriteButton = ({ product }: { product: ProductType }) => {
   const { favorites } = useAppSelector((state) => state.favorites)
 
   const dispatch = useAppDispatch()
