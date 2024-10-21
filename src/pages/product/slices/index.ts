@@ -29,6 +29,19 @@ export const loadComments = createAsyncThunk<CommentType[], number>(
   }
 )
 
+export const createProduct = createAsyncThunk<void, ProductType>(
+  "products/createProduct",
+  async (product) => {
+    await fetch(`http://localhost:5000/products`, {
+      method: "POST",
+      body: JSON.stringify(product),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+  }
+)
+
 export const createComment = createAsyncThunk<void, CommentType>(
   "products/createComment",
   async (comment, { dispatch }) => {

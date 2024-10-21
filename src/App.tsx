@@ -4,11 +4,12 @@ import { Route, Routes, useSearchParams } from "react-router-dom"
 import { Main } from "./pages/main/Main"
 import { FavoritePage } from "./pages/favorite"
 import { fetchFavorites } from "./pages/favorite/favoritesSlice"
-import { useAppDispatch } from './reduxHooks'
+import { useAppDispatch } from "./reduxHooks"
 import { fetchProducts } from "./pages/main/productsSlice"
 import { CartPage } from "./pages/cart"
 import { loadCart } from "./pages/cart/slices"
 import { Product } from "./pages/product"
+import { Admin } from "./pages/admin"
 
 function App() {
   let [searchParams, setSearchParams] = useSearchParams()
@@ -29,7 +30,7 @@ function App() {
     }
 
     if (key !== "_page") {
-      copyParams.set("_page", '1')
+      copyParams.set("_page", "1")
     }
 
     setSearchParams(copyParams)
@@ -65,6 +66,7 @@ function App() {
         <Route path="/favorite" element={<FavoritePage />} />
         <Route path="/product/:id" element={<Product />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </div>
   )

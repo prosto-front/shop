@@ -72,7 +72,7 @@ export const Main = ({
         current={
           searchParams.get("_page") ? Number(searchParams.get("_page")) : 1
         }
-        total={22}
+        total={23}
         onChange={(page) => handleChangeFilters("_page", String(page))}
       />
     </>

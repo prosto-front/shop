@@ -241,6 +241,17 @@
       "rating": 5,
       "quantity": 1,
       "img": "https://www.lg.com/content/dam/channel/wcms/kz/images/monitors/29wl500-b_adk_eeak_kz_c/29WL500-B_ADK_EEAK_KZ_C-450x450.jpg"
+    },
+    {
+      "brand": "xiaomi",
+      "name": "Xiaomi 14 Ultra Camera test ",
+      "description": "We put the Xiaomi 14 Ultra through our rigorous DXOMARK Camera test suite to measure its performance in photo, video, and zoom quality from an end-user perspective. This article breaks down how the device fared in a variety of tests and several common use cases and is intended to highlight the most important results of our testing with an extract of the captured data.",
+      "price": "3000",
+      "category": "phone",
+      "img": "https://cdn.dxomark.com/wp-content/uploads/medias/post-171171/bdc0df40e7c3983b73802b3d47dd20c4600x60085.jpg",
+      "rating": 1,
+      "quantity": 1,
+      "id": 23
     }
   ],
   "favorites": [
@@ -265,6 +276,17 @@
       "rating": 4,
       "quantity": 1,
       "img": "https://object.pscloud.io/cms/cms/Photo/img_0_62_2804_1_6.png"
+    },
+    {
+      "id": 1,
+      "brand": "samsung",
+      "name": "samsung s20",
+      "price": 300,
+      "category": "phone",
+      "description": "OUR BRIGHTEST GALAXY A SERIES SCREEN YET: Thanks to Vision Booster, the screen seamlessly adjusts to your surroundings so you can enjoy uninterrupted streaming, gaming or browsing¹ even on the sunniest afternoon",
+      "rating": 5,
+      "quantity": 1,
+      "img": "https://image-us.samsung.com/SamsungUS/sis/S20/mweb/4.jpg"
     }
   ],
   "cart": [
@@ -447,6 +469,43 @@
       "productId": 2,
       "date": "16.10.2024, 20:54:46",
       "id": 16
+    }
+  ],
+  "users": [
+    {
+      "login": "login",
+      "password": "22222222",
+      "name": "alex",
+      "phone": "1111111",
+      "id": 1
+    },
+    {
+      "login": "login",
+      "password": "22222222",
+      "name": "alex",
+      "phone": "1111111",
+      "id": 2
+    },
+    {
+      "login": "login",
+      "password": "22222222",
+      "name": "alex",
+      "phone": "1111111",
+      "id": 3
+    },
+    {
+      "login": "rgistfrfrf test",
+      "password": "11111",
+      "name": "jo.l",
+      "phone": "33333",
+      "id": 4
+    },
+    {
+      "login": "login2",
+      "password": "33333",
+      "name": "джэк",
+      "phone": "6666666666",
+      "id": 5
     }
   ]
 }

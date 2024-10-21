@@ -4,15 +4,29 @@ import {
   MenuOutlined,
   SearchOutlined,
   ShoppingCartOutlined,
+  UserOutlined,
 } from "@ant-design/icons"
 import "./index.scss"
 import { debounce } from "lodash"
-import { Input } from "antd"
-import { useAppSelector } from '../../reduxHooks'
+import { Button, Input, Modal } from "antd"
+import { useAppSelector } from "../../reduxHooks"
+import { useState } from "react"
+import { Login } from "./Login"
 
-export const Header = ({ handleChangeFilters, handleOpen, searchParams }) => {
+type Props = {
+  searchParams: URLSearchParams
+  handleOpen: () => void
+  handleChangeFilters: (a: string, b: string) => void
+}
+
+export const Header = ({
+  handleChangeFilters,
+  handleOpen,
+  searchParams,
+}: Props) => {
   const debouncedHandler = debounce(
-    (e) => handleChangeFilters("q", e.target.value),
+    (e: React.ChangeEvent<HTMLInputElement>) =>
+      handleChangeFilters("q", e.target.value),
     700
   )
 
@@ -33,8 +47,20 @@ export const Header = ({ handleChangeFilters, handleOpen, searchParams }) => {
     searchParams.get("price_gte") ||
     searchParams.get("price_lte")
 
+  const [openModal, setOpenModal] = useState(false)
+
+  const closeModal = () => {
+    setOpenModal(false)
+  }
+
   return (
     <div className="header">
+      <Button
+        size="large"
+        type="text"
+        onClick={() => setOpenModal(true)}
+        icon={<UserOutlined style={{ fontSize: 30, color: "#fff" }} />}
+      />
       <h1 className="logo">AM</h1>
       <div className="menuIconWrapper">
         {filters && <div className="circle" />}
@@ -44,7 +70,7 @@ export const Header = ({ handleChangeFilters, handleOpen, searchParams }) => {
       </div>
       <Input
         size={"small"}
-        prefixCls={<SearchOutlined />}
+        // prefixCls={<SearchOutlined />}
         onChange={debouncedHandler}
         defaultValue={searchParams.get("q") || ""}
       />
@@ -64,6 +90,14 @@ export const Header = ({ handleChangeFilters, handleOpen, searchParams }) => {
           <div className="iconQuantity">{productFavoriteQuantitty}</div>
         )}
       </div>
+      <Modal
+        footer={null}
+        onCancel={closeModal}
+        open={openModal}
+        destroyOnClose
+      >
+        <Login />
+      </Modal>
     </div>
   )
 }
